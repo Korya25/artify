@@ -5,6 +5,7 @@ class AppImages {
 
   // Objects
   static const String object1 = 'assets/image/object1.png';
+  static const object2 = 'assets/image/Image Preview.png';
 
   // person
   static const String person = 'assets/image/Image (1).png';
@@ -22,4 +23,6 @@ class AppIconSvgs {
   static const person = 'assets/icon_svgs/Icon (2).svg';
   static const search = 'assets/icon_svgs/Icon.svg';
   static const save = 'assets/icon_svgs/Save.svg';
+  static const arrowBackIOs = 'assets/icon_svgs/arrow_back.svg';
+  static const crown = 'assets/icon_svgs/crown.svg';
 }

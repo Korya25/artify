@@ -1,8 +1,8 @@
 import 'package:artify/core/resources/app_routes.dart';
+import 'package:artify/features/home/presentation/views/collection_view.dart';
 import 'package:artify/features/home/presentation/views/detail_view.dart';
 import 'package:artify/features/home/presentation/views/home_view.dart';
 import 'package:artify/features/onboarding/presentation/views/onboarding_view.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -27,9 +27,7 @@ class AppRouter {
       GoRoute(
         path: AppRoutes.collection,
         name: AppRoutes.collection,
-        builder:
-            (context, state) =>
-                const Scaffold(body: Center(child: Text('Collection'))),
+        builder: (context, state) => const CollectionView(),
       ),
     ],
   );

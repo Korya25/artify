@@ -48,7 +48,7 @@ class HomeViewState extends State<HomeView> {
             const Gap(20),
             GestureDetector(
               onTap: () {
-                context.goNamed(AppRoutes.detail);
+                context.pushNamed(AppRoutes.detail);
               },
               child: ProductCard(
                 image: AppImages.object1,
@@ -59,7 +59,12 @@ class HomeViewState extends State<HomeView> {
               ),
             ),
             const Gap(30),
-            const BestArtistCard(),
+            GestureDetector(
+              onTap: () {
+                context.pushNamed(AppRoutes.collection);
+              },
+              child: const BestArtistCard(),
+            ),
           ],
         ),
       ),
