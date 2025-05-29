@@ -1,0 +1,60 @@
+import 'package:artify/core/resources/app_colors.dart';
+import 'package:artify/features/home/presentation/widgets/card_header.dart';
+import 'package:artify/features/home/presentation/widgets/product_image.dart';
+import 'package:artify/features/home/presentation/widgets/product_info.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+
+class ProductCard extends StatelessWidget {
+  final String image;
+  final String title;
+  final String timeLeft;
+  final String bid;
+  final VoidCallback onBidPressed;
+
+  const ProductCard({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.timeLeft,
+    required this.bid,
+    required this.onBidPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 330,
+      child: Column(
+        children: [
+          const CardHeader(),
+          const Gap(16),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              color: AppColors.scaffoldBackground,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 6,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                ProductImage(image: image),
+                ProductInfo(
+                  title: title,
+                  timeLeft: timeLeft,
+                  bid: bid,
+                  onBidPressed: onBidPressed,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

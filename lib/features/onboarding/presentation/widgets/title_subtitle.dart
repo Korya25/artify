@@ -29,7 +29,7 @@ class TitleSubtitle extends StatelessWidget {
                   TextSpan(
                     text: AppString.logoName,
                     style: AppTextStyle.onboardingTitle.copyWith(
-                      color: AppColors.logoName,
+                      color: AppColors.green,
                     ),
                   ),
                 ],

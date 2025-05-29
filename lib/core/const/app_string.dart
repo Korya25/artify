@@ -13,4 +13,9 @@ class AppString {
 
   static const String logoName = 'NFTs';
   static const String skipButton = 'Skip';
+
+  // home
+  static const String homeTitle1 = 'Selling the';
+  static const String homeTitle2 = 'MOST POPULAR';
+  static const String homeTitle3 = 'NFT is only here';
 }

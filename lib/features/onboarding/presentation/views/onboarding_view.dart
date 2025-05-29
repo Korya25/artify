@@ -1,4 +1,5 @@
 import 'package:artify/core/const/app_assets.dart';
+import 'package:artify/core/resources/app_colors.dart';
 import 'package:artify/core/resources/app_routes.dart';
 import 'package:artify/features/onboarding/presentation/widgets/onboarding_bottom.dart';
 import 'package:artify/features/onboarding/presentation/widgets/onboarding_page.dart';
@@ -44,6 +45,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.scaffoldBackground,
       body: Column(
         children: [
           // Page View

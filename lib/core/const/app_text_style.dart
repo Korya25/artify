@@ -14,8 +14,12 @@ class AppTextStyle {
     color: AppColors.grey,
   );
   static TextStyle skipButton = GoogleFonts.spaceGrotesk(
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontSize: 14,
     color: AppColors.black,
+  );
+  static TextStyle categoryFilter = GoogleFonts.spaceGrotesk(
+    fontWeight: FontWeight.w500,
+    fontSize: 12,
   );
 }
