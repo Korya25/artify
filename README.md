@@ -14,26 +14,7 @@
 
 ## 📸 App Screenshot
 
----
-
-<img src="assets/screen_shot/deviceframes (1).png" width="600"/>
-
----
-
-<img src="assets/screen_shot/deviceframes.png" width="600"/>
-
-
-## 🧱 Folder Structure
-
-```plaintext
-lib/
-├── core/
-│   ├── const/            # Constants (assets, text styles)
-│   ├── resources/        # Theme-related files (colors)
-├── features/
-│   ├── home/
-│   │   ├── presentation/
-│   │   │   ├── views/    # Screens (e.g., CollectionView, DetailScreen)
-│   │   │   └── widgets/  # UI Components (e.g., NFTItemCard, DetailHeader)
-│   └── onboarding/
-│       └── presentation/widgets/  # Shared UI widgets like FadeOutImage
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="assets/screen_shot/deviceframes (1).png" width="300"/>
+  <img src="assets/screen_shot/deviceframes.png" width="300"/>
+</div>
