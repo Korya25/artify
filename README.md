@@ -14,11 +14,14 @@
 
 ## 📸 App Screenshot
 
-![Artify Screenshot]
-(assets/screen_shot/deviceframes (1).png)
-(assets/screen_shot/deviceframes.png)
+---
 
-> Make sure the screenshot image is saved in the path: `assets/screenshots/collection_view.png`
+<img src="assets/screen_shot/deviceframes (1).png" width="600"/>
+
+---
+
+<img src="assets/screen_shot/deviceframes.png" width="600"/>
+
 
 ## 🧱 Folder Structure
 
