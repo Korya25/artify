@@ -7,8 +7,14 @@ class AppImages {
   static const String object1 = 'assets/image/object1.png';
   static const object2 = 'assets/image/Image Preview.png';
 
+  static const object3 = 'assets/image/Image4.png';
+  static const object4 = 'assets/image/Image5.png';
+  static const object5 = 'assets/image/Image7.png';
+
   // person
   static const String person = 'assets/image/Image (1).png';
+
+  static const banner = 'assets/image/Banner.png';
 }
 
 class AppIconSvgs {
@@ -25,4 +31,5 @@ class AppIconSvgs {
   static const save = 'assets/icon_svgs/Save.svg';
   static const arrowBackIOs = 'assets/icon_svgs/arrow_back.svg';
   static const crown = 'assets/icon_svgs/crown.svg';
+  static const varfiyIcon = 'assets/icon_svgs/varfiy_icon.svg';
 }

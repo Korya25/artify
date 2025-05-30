@@ -2,10 +2,10 @@ import 'package:artify/core/const/app_assets.dart';
 import 'package:artify/core/const/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:artify/features/home/presentation/widgets/bid_button.dart';
+import 'package:artify/features/home/presentation/widgets/detail_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
 
 class DetailView extends StatelessWidget {
   const DetailView({super.key});
@@ -20,7 +20,7 @@ class DetailView extends StatelessWidget {
             child: Column(
               children: const [
                 Gap(40),
-                DetailHeader(),
+                DetailHeader(title: 'Detail'),
                 Gap(30),
                 DetailViewBody(),
               ],
@@ -28,31 +28,6 @@ class DetailView extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class DetailHeader extends StatelessWidget {
-  const DetailHeader({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        GestureDetector(
-          onTap: () {
-            context.pop();
-          },
-          child: SvgPicture.asset(
-            AppIconSvgs.arrowBackIOs,
-            height: 24,
-            width: 24,
-          ),
-        ),
-        Text('Detail', style: AppTextStyle.skipButton.copyWith(fontSize: 18)),
-        const SizedBox(width: 24), // Placeholder for spacing
-      ],
     );
   }
 }
