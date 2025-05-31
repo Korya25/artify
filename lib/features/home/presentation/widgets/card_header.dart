@@ -1,5 +1,5 @@
 import 'package:artify/core/const/app_assets.dart';
-import 'package:artify/core/const/app_text_style.dart';
+import 'package:artify/core/resources/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

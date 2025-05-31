@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import 'package:artify/core/const/app_assets.dart';
-import 'package:artify/core/const/app_text_style.dart';
+import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:artify/features/home/presentation/views/banner_section.dart';
 import 'package:artify/features/home/presentation/views/dateail_screen.dart';

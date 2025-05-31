@@ -1,4 +1,4 @@
-import 'package:artify/core/const/app_text_style.dart';
+import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,5 @@
 import 'package:artify/core/resources/app_router.dart';
+import 'package:artify/core/resources/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,
+      theme: AppTheme.theme(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:artify/core/const/app_assets.dart';
-import 'package:artify/core/const/app_text_style.dart';
+import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:artify/features/home/presentation/widgets/bid_button.dart';
 import 'package:artify/features/home/presentation/widgets/detail_header.dart';
