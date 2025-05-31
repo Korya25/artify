@@ -3,6 +3,7 @@ import 'package:artify/features/home/presentation/widgets/card_header.dart';
 import 'package:artify/features/home/presentation/widgets/product_image.dart';
 import 'package:artify/features/home/presentation/widgets/product_info.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class ProductCard extends StatelessWidget {
@@ -24,19 +25,19 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 330,
+      width: 330.w,
       child: Column(
         children: [
           const CardHeader(),
-          const Gap(16),
+          Gap(16.h),
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(25.r),
               color: AppColors.scaffoldBackground,
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 6,
+                  blurRadius: 6.r,
                   offset: Offset(0, 3),
                 ),
               ],

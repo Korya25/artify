@@ -2,6 +2,7 @@ import 'package:artify/core/const/app_string.dart';
 import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/features/onboarding/presentation/widgets/fade_out_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingHeader extends StatelessWidget {
   final VoidCallback onSkip;
@@ -19,7 +20,7 @@ class OnboardingHeader extends StatelessWidget {
       children: [
         FadeOutImage(
           imageWidget: Image.asset(
-            height: 444,
+            height: 444.h,
             width: MediaQuery.of(context).size.width,
             imagePath,
             fit: BoxFit.fill,

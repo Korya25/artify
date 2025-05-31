@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductImage extends StatelessWidget {
   final String image;
@@ -8,10 +9,10 @@ class ProductImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: const BorderRadius.vertical(top: Radius.circular(25)),
+      borderRadius: BorderRadius.vertical(top: Radius.circular(25.r)),
       child: Image.asset(
         image,
-        height: 220,
+        height: 220.h,
         width: double.infinity,
         fit: BoxFit.cover,
       ),

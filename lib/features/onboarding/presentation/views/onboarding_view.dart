@@ -11,34 +11,32 @@ class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
 
   @override
-  State<OnboardingView> createState() => _OnboardingViewState();
+  State<OnboardingView> createState() => _OnboardingScreenState();
 }
 
-class _OnboardingViewState extends State<OnboardingView> {
-  final PageController _pageController = PageController();
-  final int pageCount = 3;
+class _OnboardingScreenState extends State<OnboardingView> {
+  final PageController _controller = PageController();
+  final int _totalPages = 3;
 
-  @override
-  @override
   @override
   void dispose() {
+    _controller.dispose();
     super.dispose();
-    _pageController.dispose();
   }
 
-  void _goToHomePage() {
+  void _navigateToHome() {
     context.goNamed(AppRoutes.home);
   }
 
-  void _goToNextPage() {
-    if (_pageController.page != null &&
-        _pageController.page!.round() < pageCount - 1) {
-      _pageController.nextPage(
+  void _goToNext() {
+    final currentPage = _controller.page;
+    if (currentPage != null && currentPage.round() < _totalPages - 1) {
+      _controller.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
     } else {
-      _goToHomePage();
+      _navigateToHome();
     }
   }
 
@@ -51,25 +49,25 @@ class _OnboardingViewState extends State<OnboardingView> {
           // Page View
           Expanded(
             child: PageView(
-              controller: _pageController,
+              controller: _controller,
               children: [
                 OnboardingPage(
                   title: AppString.titleOnboarding1,
                   subTitle: AppString.subTitleOnboarding1,
-                  goToHomePage: _goToHomePage,
+                  goToHomePage: _navigateToHome,
                   imagePath: AppImages.onboardingImage1,
                 ),
                 OnboardingPage(
                   title: AppString.titleOnboarding2,
                   subTitle: AppString.subTitleOnboarding2,
-                  goToHomePage: _goToHomePage,
+                  goToHomePage: _navigateToHome,
                   imagePath: AppImages.onboardingImage2,
                 ),
                 OnboardingPage(
                   title: AppString.titleOnboarding3,
                   subTitle: AppString.subTitleOnboarding3,
+                  goToHomePage: _navigateToHome,
                   imagePath: AppImages.onboardingImage3,
-                  goToHomePage: _goToHomePage,
                 ),
               ],
             ),
@@ -77,9 +75,9 @@ class _OnboardingViewState extends State<OnboardingView> {
 
           // Bottom Controls
           OnboardingBottom(
-            pageController: _pageController,
-            count: pageCount,
-            onNext: _goToNextPage,
+            pageController: _controller,
+            count: _totalPages,
+            onNext: _goToNext,
           ),
         ],
       ),

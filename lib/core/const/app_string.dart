@@ -3,9 +3,9 @@ class AppString {
   static const String subTitleOnboarding1 =
       'A vibrant marketplace where creators showcase their unique NFTs.';
 
-  static const String titleOnboarding2 = 'Connect with Top Creators';
+  static const String titleOnboarding2 = 'Connect with Creators';
   static const String subTitleOnboarding2 =
-      'Follow your favorite artists, explore exclusive drops, and grow your collection.';
+      'Follow your favorite artists, explore exclusive drops.';
 
   static const String titleOnboarding3 = 'Secure and Seamless';
   static const String subTitleOnboarding3 =
@@ -18,4 +18,15 @@ class AppString {
   static const String homeTitle1 = 'Selling the';
   static const String homeTitle2 = 'MOST POPULAR';
   static const String homeTitle3 = 'NFT is only here';
+
+  static const String endIn = 'Ends in';
+  static const String highestBidToday = 'Highest Bid Today';
+  static const String placeBid = 'Place Bid';
+  static const String bestArtist = 'Best Artist';
+  static const String follow = 'Follow';
+  static const String detail = 'Detail';
+  static const String description = 'Description';
+  static const String price = 'Price';
+  static const String eth = 'ETH';
+  static const String collection = 'Collection';
 }

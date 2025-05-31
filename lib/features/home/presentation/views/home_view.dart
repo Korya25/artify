@@ -6,6 +6,7 @@ import 'package:artify/features/home/presentation/widgets/custom_bottom_nav_bar.
 import 'package:artify/features/home/presentation/widgets/header_home_title.dart';
 import 'package:artify/features/home/presentation/widgets/product_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
@@ -28,67 +29,53 @@ class HomeViewState extends State<HomeView> {
         onItemSelected: (index) => setState(() => _selectedIndex = index),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            const Gap(40),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35),
-              child: SizedBox(
-                height: 72,
-                width: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Gap(20.h),
+
+              // Header
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 35.w),
                 child: HeaderHomeTitle(),
               ),
-            ),
-            const Gap(20),
-            CategorySection(
-              selectedIndex: selectedCategory,
-              onCategorySelected:
-                  (index) => setState(() => selectedCategory = index),
-            ),
-            const Gap(20),
-            GestureDetector(
-              onTap: () {
-                context.pushNamed(AppRoutes.detail);
-              },
-              child: ProductCard(
-                image: AppImages.object1,
-                title: 'Hypebeast Apes',
-                timeLeft: '1h 23m 32s',
-                bid: '2.23 ETH',
-                onBidPressed: () {},
+              Gap(18.h),
+
+              // Category
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: CategoryFilter(
+                  selectedIndex: _selectedIndex,
+                  onCategorySelected: (p0) {},
+                ),
               ),
-            ),
-            const Gap(30),
-            GestureDetector(
-              onTap: () {
-                context.pushNamed(AppRoutes.collection);
-              },
-              child: const BestArtistCard(),
-            ),
-          ],
+              Gap(18.h),
+
+              // Objject Card
+              GestureDetector(
+                onTap: () {
+                  context.pushNamed(AppRoutes.detail);
+                },
+                child: ProductCard(
+                  image: AppImages.object1,
+                  title: 'Hypebeast Apes',
+                  timeLeft: '1h 23m 32s',
+                  bid: '2.23 ETH',
+                  onBidPressed: () {},
+                ),
+              ),
+              Gap(20.h),
+
+              // Artist
+              GestureDetector(
+                onTap: () {
+                  context.pushNamed(AppRoutes.collection);
+                },
+                child: const BestArtistCard(),
+              ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
-}
-
-class CategorySection extends StatelessWidget {
-  final int selectedIndex;
-  final ValueChanged<int> onCategorySelected;
-
-  const CategorySection({
-    super.key,
-    required this.selectedIndex,
-    required this.onCategorySelected,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: CategoryFilter(
-        selectedIndex: selectedIndex,
-        onCategorySelected: onCategorySelected,
       ),
     );
   }

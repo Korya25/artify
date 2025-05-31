@@ -1,6 +1,7 @@
 import 'package:artify/core/const/app_assets.dart';
 import 'package:artify/core/resources/app_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,12 +20,12 @@ class DetailHeader extends StatelessWidget {
           },
           child: SvgPicture.asset(
             AppIconSvgs.arrowBackIOs,
-            height: 24,
-            width: 24,
+            height: 24.h,
+            width: 24.w,
           ),
         ),
-        Text(title, style: AppTextStyle.skipButton.copyWith(fontSize: 18)),
-        const SizedBox(width: 24), // Placeholder for spacing
+        Text(title, style: AppTextStyle.skipButton.copyWith(fontSize: 18.sp)),
+        SizedBox(width: 24.w),
       ],
     );
   }

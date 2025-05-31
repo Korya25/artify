@@ -2,6 +2,7 @@ import 'package:artify/core/const/app_string.dart';
 import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HeaderHomeTitle extends StatelessWidget {
   const HeaderHomeTitle({super.key});
@@ -11,7 +12,7 @@ class HeaderHomeTitle extends StatelessWidget {
     return RichText(
       textAlign: TextAlign.left,
       text: TextSpan(
-        style: AppTextStyle.onboardingTitle.copyWith(fontSize: 24),
+        style: AppTextStyle.onboardingTitle.copyWith(fontSize: 24.sp),
         children: [
           TextSpan(text: AppString.homeTitle1),
           TextSpan(text: ' '),
@@ -19,7 +20,7 @@ class HeaderHomeTitle extends StatelessWidget {
             text: AppString.homeTitle2,
             style: AppTextStyle.onboardingTitle.copyWith(
               color: AppColors.green,
-              fontSize: 24,
+              fontSize: 24.sp,
             ),
           ),
           TextSpan(text: ' '),

@@ -1,7 +1,9 @@
 import 'package:artify/core/const/app_assets.dart';
+import 'package:artify/core/const/app_string.dart';
 import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BidButton extends StatelessWidget {
@@ -14,19 +16,19 @@ class BidButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: 37,
-        width: 122,
+        height: 37.h,
+        width: 122.w,
         decoration: BoxDecoration(
           color: AppColors.black,
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(40.r),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(AppIconSvgs.judge, width: 20),
-            const SizedBox(width: 8),
+            SvgPicture.asset(AppIconSvgs.judge, width: 20.w),
+            SizedBox(width: 8.w),
             Text(
-              'Place Bid',
+              AppString.placeBid,
               style: AppTextStyle.skipButton.copyWith(color: AppColors.white),
             ),
           ],

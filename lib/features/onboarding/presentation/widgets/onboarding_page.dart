@@ -1,6 +1,7 @@
 import 'package:artify/features/onboarding/presentation/widgets/onboarding_header.dart';
 import 'package:artify/features/onboarding/presentation/widgets/title_subtitle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingPage extends StatelessWidget {
   final String title;
@@ -24,7 +25,7 @@ class OnboardingPage extends StatelessWidget {
         OnboardingHeader(onSkip: goToHomePage, imagePath: imagePath),
 
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 40.w),
 
           child: TitleSubtitle(title: title, subTitle: subTitle),
         ),

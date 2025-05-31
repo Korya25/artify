@@ -3,6 +3,7 @@ import 'package:artify/core/const/app_string.dart';
 import 'package:artify/core/resources/app_text_style.dart';
 import 'package:artify/core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class TitleSubtitle extends StatelessWidget {
@@ -13,7 +14,7 @@ class TitleSubtitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 5,
+      spacing: 5.h,
       children: [
         // title
         Stack(
